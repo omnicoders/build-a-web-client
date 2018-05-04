@@ -1,6 +1,11 @@
 # Web Client
 This is a learning application that shows how to build a React Web Application that consumes a JSON API.
 
+## Install Dependencies
+* Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
+* Node.js: https://nodejs.org/en/download/package-manager
+* Yarn: https://yarnpkg.com/lang/en/docs/install 
+
 ## Clone & Run Current Project
 ```
 git clone https://github.com/matthewstewart/web-client.git
@@ -35,7 +40,7 @@ yarn start
 
 ### Add Bootstrap 4
 We are going to be utilizing the Bootstrap 4 CDN for a quick styling/grid library.  See [https://getbootstrap.com/docs/4.0/getting-started/introduction/#quick-start](https://getbootstrap.com/docs/4.0/getting-started/introduction/#quick-start).  
-There are four files that we will retrieve by CDN and place in our HTML template found at `/public/html`:  
+There are four files that we will retrieve by CDN and place in our HTML template found at `/public/index.html`:  
 
 - bootstrap.min.css - The minified Bootstrap CSS. This should be included in the `<head>`.
 ```
