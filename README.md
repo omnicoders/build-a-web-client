@@ -167,7 +167,7 @@ class LandingPage extends Component {
               </div>
               <div className="card-body">
                 <h6 className="card-subtitle mb-2 text-muted">/src/pages/LandingPage.js</h6>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
                 <Link to="/about" className="card-link">About</Link>
               </div>
             </div>
@@ -282,7 +282,7 @@ class AboutPage extends Component {
               </div>
               <div className="card-body">
                 <h6 className="card-subtitle mb-2 text-muted">/src/pages/AboutPage.js</h6>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
                 <Link to="/" className="card-link">Home</Link>
               </div>
             </div>
