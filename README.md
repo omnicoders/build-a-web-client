@@ -58,3 +58,115 @@ There are four files that we will retrieve by CDN and place in our HTML template
 ```
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 ```
+
+### Create Components Directory
+```
+mkdir ./src/components
+```
+
+### Add BrowserRouter Wrapper
+```js
+// /src/index.js
+import React from 'react';  
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+), document.getElementById('root'));
+registerServiceWorker();
+```
+
+### Add Router Import
+```js
+// /src/App.js
+import React, { Component } from 'react';
+import './App.css';
+import Router from './Router';
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="page-container">
+          <Router />
+        </div>  
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+### Add App Styles
+```css
+/* /src/App.css */
+.page-container {
+  position: relative;
+  display: block;
+  width: 100;
+  min-height: 100vh;
+  background-color: #EEE;
+}
+```
+
+### Add Router Component
+```js
+// /src/Router.js
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+
+class Router extends Component {
+  render() {
+    const landingPage = () => {
+      return (
+        <LandingPage {...this.props}/>
+      );
+    };
+    return ( 
+      <main>
+        <Switch>
+          <Route exact path='/' component={landingPage}/>
+        </Switch>
+      </main>
+    );
+  }
+}
+
+export default Router;
+
+```
+
+### Create Pages Directory
+```
+mkdir ./src/pages
+```
+
+### Create LandingPage Component
+```
+// /src/pages/LandingPage.js
+import React, { Component } from 'react';
+
+class LandingPage extends Component {
+  render() {
+    return ( 
+      <div>
+        <div className="row">
+          <div className="col-12">
+            <h1 className="display-4">Hello World</h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default LandingPage;
+```
