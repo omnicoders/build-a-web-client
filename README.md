@@ -150,7 +150,7 @@ mkdir ./src/pages
 ```
 
 ### Create LandingPage Component
-```
+```js
 // /src/pages/LandingPage.js
 import React, { Component } from 'react';
 
